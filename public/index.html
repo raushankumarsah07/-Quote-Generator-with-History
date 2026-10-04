@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote Generator with History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,400&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section class="stage" aria-live="polite">
+    <p id="note" class="note" hidden>Showing an offline quote. The quote service didn't respond.</p>
+    <blockquote id="quote" class="quote">Loading a quote...</blockquote>
+    <p id="author" class="author"></p>
+    <div class="row">
+      <button id="newBtn" class="primary">New quote</button>
+      <button id="favBtn">Save to favorites</button>
+      <button id="copyBtn">Copy</button>
+    </div>
+    <p id="msg" class="msg" role="status"></p>
+  </section>
+
+  <section class="history">
+    <div class="head">
+      <h2>Favorites <span id="count"></span></h2>
+      <input id="search" type="search" placeholder="Search by quote or author" aria-label="Search favorites">
+    </div>
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty" hidden>No favorites yet. Save a quote you like and it will show up here.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

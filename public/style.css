@@ -1,0 +1,30 @@
+:root{--bg:#14231f;--card:#f4efe3;--ink:#1c2a25;--muted:#667268;--gold:#d9a441;--line:#d9d2bf;--err:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--card);font:16px/1.55 Manrope,system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:6vh 5vw 10vh}
+.stage{padding:8vh 0 5vh}
+.quote{font:italic 400 clamp(1.7rem,4.5vw,3rem)/1.25 Fraunces,Georgia,serif;margin:0 0 18px;border-left:4px solid var(--gold);padding-left:22px;min-height:3.5em}
+.author{margin:0 0 28px 26px;color:var(--gold);font-weight:700}
+.note{background:#2a3b35;border-radius:8px;padding:8px 12px;display:inline-block;font-size:.9rem;margin:0 0 18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-left:26px}
+button{font:inherit;font-weight:700;padding:10px 18px;border-radius:8px;border:1.5px solid var(--card);background:transparent;color:var(--card);cursor:pointer}
+button:hover{background:rgba(244,239,227,.12)}
+button.primary{background:var(--gold);border-color:var(--gold);color:#1c1a12}
+button.primary:hover{background:#e6b556}
+button:disabled{opacity:.5;cursor:wait}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.msg{min-height:1.5em;margin:14px 0 0 26px;color:#bfe0c9}
+.msg.error{color:#ffb4ab}
+.history{background:var(--card);color:var(--ink);border-radius:16px;padding:26px}
+.head{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:12px}
+h2{font:500 1.5rem Fraunces,Georgia,serif;margin:0}
+h2 span{color:var(--muted);font:500 1rem Manrope,sans-serif}
+input{font:inherit;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;background:#fffdf7;min-width:230px}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:16px 0;border-top:1px solid var(--line)}
+.list .t{margin:0 0 4px;font-family:Fraunces,Georgia,serif;font-size:1.1rem}
+.list .a{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.list button{color:var(--ink);border-color:var(--line);padding:5px 12px;font-size:.85rem;margin-right:6px}
+.list button.del{color:var(--err)}
+.empty{color:var(--muted);margin:12px 0 0}
+@media(max-width:560px){.row,.msg,.author{margin-left:0}input{width:100%}}
